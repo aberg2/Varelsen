@@ -12,19 +12,28 @@ import java.util.ArrayList;
  *
  * @author Magnus Silverdal
  */
-public class SimulationModel {
+    public class SimulationModel {
     Scene scene;
-    Cell c;
+    Cell c[];
     public SimulationModel() {
-        c = new Cell(2,2);
+        c = new Cell[10];
+        for (int i = 0; i < 10; i++){
+            c[i] = new Cell((10),(int)(Math.random()*40));
+
+        }
     }
     public void update() {
-        c.update();
+        for (int i = 0; i < 10; i++) {
+
+            c[i].update();
+        }
     }
 
     public ArrayList<Shape> getShapes() {
         ArrayList<Shape> shapes = new ArrayList<>();
-        shapes.add(c.getShape());
+        for (int i = 0; i < 10; i++) {
+            shapes.add(c[i].getShape());
+        }
         return shapes;
     }
 

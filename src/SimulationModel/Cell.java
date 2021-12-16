@@ -4,6 +4,8 @@ import Shapes.Point;
 import Shapes.Shape;
 import Shapes.Sprite;
 
+import java.awt.*;
+
 /**
  * This is a class
  * Created 2021-11-15
@@ -14,10 +16,10 @@ public class Cell {
     private int x;
     private int y;
 
+
     public Cell(int x, int y) {
         this.x = x;
         this.y = y;
-
     }
 
     public Shape getShape() {
@@ -25,11 +27,10 @@ public class Cell {
     }
 
     public void update() {
-
-        if( this.x < 50) {
-            x++;
+        x++;
+        if(x >39){
+            x -= 39;
         }
-
     }
 
     public Sprite getSprite() {

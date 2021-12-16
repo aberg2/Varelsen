@@ -77,7 +77,7 @@ public class Controller implements Runnable{
 
             while(deltaUPS >= 1) {
                 model.update();
-                viewNative.draw(model.getShapes(), 0xFF0000);
+                viewNative.draw(model.getShapes(), 0xFFFF00);
                 //viewSprite.drawSprites(model.getSprites());
                 updates++;
                 deltaUPS--;
